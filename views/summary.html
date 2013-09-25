@@ -1,0 +1,179 @@
+<!--
+{% if video_exists or image_exists %}
+  <div class="gcb-col-5">
+{% else %}
+  <div class="gcb-col-11">
+{% endif %}
+
+  <h1 class="gcb-product-headers-large">
+    {{course_info.course.title}}
+  </h1>
+  <div class="gcb-product-headers">
+  {{course_info.course.blurb | gcb_tags}}
+  </div>
+
+</div>
+-->
+
+<!--
+<div class="gcb-col-5">
+    {% if video_exists %}
+      <iframe class="youtube-player" type="text/html" width="430"
+          title="{{ gettext('YouTube Video Player') }}"
+          height="300" src="{{course_info.course.main_video.url}}"
+          frameborder="0" allowfullscreen></iframe>
+    {% else%}
+      <img height="300"
+          alt="{{course_info.course.main_image.alt_text}}"
+          src="{{course_info.course.main_image.url}}">
+    {% endif %}
+</div>
+-->
+
+<!--
+<div class="gcb-col-5">
+  <ul class="bxslider">
+    <li><img src="assets/img/33DataCenter.jpg" /></li>
+    <li><img src="assets/img/33Ecommerce.jpg" /></li>
+    <li><img src="assets/img/33Health.jpg" /></li>
+    <li><img src="assets/img/33LHC.jpg" /></li>
+    <li><img src="assets/img/33Radar.jpg" /></li>
+    <li><img src="assets/img/33Sensors.jpg" /></li>
+  </ul>
+</div>
+-->
+
+<div id="container"> 
+  
+  <!--  Outer wrapper for presentation only, this can be anything you like -->
+  <div id="banner-fade"> 
+    
+    <!-- start Basic Jquery Slider -->
+    <ul class="bjqs">
+      <li>
+        <div class="section_description">
+          <h2>Data Science</h2>
+          <p>Data Science underlies the collection, curation, analysis, and action on Big Data. </p><p>According to <a href="http://www.mckinsey.com/insights/business_technology/big_data_the_next_frontier_for_innovation" target="_blank" class="slider-data-science-link">McKinsey</a> there is a need for up to 190,000 new technical positions in data science ("data nerds") and an additional 1.5 million positions interpreting and managing the data science process.</p>
+        </div>
+        <img src="assets/img/39DataScience.jpg"></li>
+      <li>
+        <iframe class="youtube-player" title="YouTube Video Player" type="text/html" scrolling="auto" width="550" height="338" frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/wPcOwLYZfks?feature=player_embedded&amp;rel=0" style="position:absolute;top:20px;left:120px;"></iframe>
+        <div class="section_description">
+          <h2>Big Data <br>
+            X-Informatics Overview</h2>
+          <p>The Big Data X-Informatics course is designed as an overview course for a Data Science Curriculum. The courses covers a mix of application areas (the X in X-Informatics) and technologies needed to support the field electronically i.e. to process the application data.</p>
+        </div>
+        <img src="assets/img/31Overview.jpg"></li>
+      
+      <li> <img src="assets/img/32Physics.jpg"/>
+        <div class="section_description">
+          <h2>Physics (LHC)</h2>
+          <p class="slider-unit-numbers">See Unit 8,9,10</p>
+          <p>The physics section of the course described the application of big data informatics in the field of particle physics. We cover the technologies involved with analysis of data from the Large Hadron Collider (LHC) that led to the discovery of the Higgs Boson particle recently. Technologies include Monte Carlo methods and the "counting of random events".</p>
+          <div class="citation"> <a href="http://creativecommons.org/licenses/by/2.0/" target="_blank">
+            <p style="font-size:9px; float:left; margin-left:5px; font-folor:#999;">CC</a>&nbsp;
+              By&nbsp; <a href="http://www.flickr.com/photos/mamboman/" target="_blank">Mamboman1&nbsp;&nbsp;</a> <a href="http://www.flickr.com/photos/50247722@N00/2396882922/" target="_blank">Image</a></p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="section_description">
+          <h2>Cloud Computing</h2>
+          <p class="slider-unit-numbers">See Unit 22,23,24</p>
+          <p>Clouds are exploding with an expectation for 2014-15 of the worldwide addition of 10 million new servers and 10 Exabytes of storage in major commercial cloud data centers. We will learn about the Infrastructure, Platform and Software as a Service. The rallying cry of this course is Clouds running Data Analytics Collaboratively processing Big Data to solve problems in X-Informatics.</p>
+          <div class="citation"> <a href="http://creativecommons.org/licenses/by/2.0/" target="_blank">
+            <p style="font-size:9px; float:left; margin-left:5px; font-folor:#999;">CC</a>&nbsp;
+              By&nbsp; <a href="http://www.flickr.com/photos/wbob/" target="_blank">~Bob~West~&nbsp;&nbsp;</a> <a href="http://www.flickr.com/photos/wbob/4171615158/" target="_blank">Image</a></p>
+          </div>
+        </div>
+        <img src="assets/img/33Cloud.jpg"></li>
+      
+      <li>
+        <div class="section_description">
+          <h2>e-Commerce</h2>
+           <p class="slider-unit-numbers">See Unit 12,13,14.15</p>
+          <p>E-commerce, exemplified by eBay and Amazon, is exploding with US sales in 2012 of $226 billion, an increase of 12 percent over the previous year. Here we describe recommender systems with technologies like clustering and collaborative filtering and show how they use rankings and properties of items and users to make suggestions for what you like.</p>
+        </div>
+        <img src="assets/img/34Commerce.jpg"></li>
+      <li>
+        <div class="section_description">
+          <h2>Web Search</h2>
+          <p class="slider-unit-numbers">See Unit 17,18</p>
+          <p>Web Search was perhaps the earliest commercial big data application. We describe how queries are processed and some of the steps involved in returning the most pleasing ranked results. We relate field historically to libraries and broadly to field of information retrieval. The impact of satisfying the user searching and those trying to make money is discussed.</p>
+        </div>
+        <img src="assets/img/35WebSearch.jpg"></li>
+      <li>
+        <div class="section_description">
+          <h2>Health</h2>
+          <p class="slider-unit-numbers">See Unit 27</p>
+          <p>Health covers many areas of life sciences from bioinformatics to personal wellness with clouds showing growing use with important privacy issues. Electronic medical records, pathology images, personal health sensors, genomics and proteomics. The European Union believes that broadly available health information will remove inequities in quality of care.</p>
+          <div class="citation"> <a href="http://creativecommons.org/licenses/by/2.0/" target="_blank">
+            <p style="font-size:9px; float:left; margin-left:5px; font-folor:#999;">CC</a>&nbsp;
+              By&nbsp; <a href="http://www.flickr.com/photos/gynti/" target="_blank">epSos.de&nbsp;&nbsp;</a> <a href="http://www.flickr.com/photos/epsos/8116279888/" target="_blank">Image</a></p>
+          </div>
+        </div>
+        <img src="assets/img/36Health.jpg"></li>
+      <li>
+        <div class="section_description">
+          <h2>Sensor</h2>
+          <p class="slider-unit-numbers">See Unit 28</p>
+          <p>Sensors are seen as the The Internet of Things where Cisco predicts that we will have 50 billion devices by 2020. Clouds naturally control sensors supporting for example smartphones (one of the largest class of sensors) with information about the world. We discuss examples from tweets and robots through the devices that monitor the health of people and machines.</p>
+          <div class="citation"> <a href="http://creativecommons.org/licenses/by/2.0/" target="_blank">
+            <p style="font-size:9px; float:left; margin-left:5px; font-folor:#999;">CC</a>&nbsp;
+              By&nbsp; <a href="http://www.flickr.com/photos/intelfreepress/" target="_blank">IntelFreePress&nbsp;&nbsp;</a> <a href="http://www.flickr.com/photos/54450095@N05/8273834438/" target="_blank">Image</a></p>
+          </div>
+        </div>
+        <img src="assets/img/37Sensor.jpg"></li>
+      <li>
+        <div class="section_description">
+          <h2>Radar</h2>
+          <p class="slider-unit-numbers">See Unit 29</p>
+          <p>Radar Informatics and Remote Sensing enable discovery of Mother Nature's secrets from earthquake forecasting through study of the sadly disappearing glaciers with petabyte datasets. Data analytics involve signal and image processing with Geographical Information Systems as the user interface.</p>
+          <div class="citation"> <a href="http://creativecommons.org/licenses/by/2.0/" target="_blank">
+            <p style="font-size:9px; float:left; margin-left:5px; font-folor:#999;">CC</a>&nbsp;
+              By&nbsp; <a href="http://www.flickr.com/photos/gynti/" target="_blank">gynti_46&nbsp;&nbsp;</a> <a href="http://www.flickr.com/photos/gynti/8032425861/" target="_blank">Image</a></p>
+          </div>
+        </div>
+        <img src="assets/img/38Radar.jpg"></li>
+    </ul>
+    <!-- end Basic jQuery Slider --> 
+    
+  </div>
+</div>
+<!--<div id="course-statement"><h2 id="course-statment-text">Use of Clouds runing Data Analytics Collaboratively processing <br>Big Data to solve problems in X-Informatics.</h2></div>--> 
+
+<!-- End outer wrapper --> 
+
+<!--<script class="secret-source">
+        jQuery(document).ready(function($) {
+
+          $('#banner-fade').bjqs({
+            height      : 395,
+            width       : 1024,
+            responsive  : false,
+			showmarkers : false,
+			prevtext:'<img src=assets/img/left.png />',
+			nexttext:'<img src=assets/img/right.png />'
+          });
+
+        });
+      </script>--> 
+
+<script class="secret-source">
+        jQuery(document).ready(function($) {
+
+          $('#banner-fade').bjqs({
+            height      : 395,
+            width       : 1024,
+			animtype : 'fade',
+			animduration:0,
+            responsive  : false,
+			showmarkers : false,
+			hoverpause : true,
+			animspeed : 100000,
+			prevtext:'<img src=assets/img/left.png />',
+			nexttext:'<img src=assets/img/right.png />'
+          });
+
+        });
+      </script>

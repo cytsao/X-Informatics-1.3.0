@@ -1,0 +1,89 @@
+{% extends 'base_course.html' %}
+
+{% block top_content %} 
+<script>
+    {# I18N: This is shown to the student in a popup after registration. #}
+    var regConfirmationMsg = "{{ gettext('Thank you for registering for the course. Click the Announcements tab for important information.') }}";
+    if(window.location.hash == '#registration_confirmation') {
+      cbShowMsg(regConfirmationMsg);
+      setTimeout(function() {cbHideMsg();}, 20000);
+    }
+    {# I18N: This is shown to the student in a popup if registrations for the course are not open. #}
+    var regClosedMsg = "{{ gettext('Registrations for this course are not open.') }}";
+    if(window.location.hash == '#registration_closed') {
+      cbShowMsg(regClosedMsg);
+      setTimeout(function() {cbHideMsg();}, 20000);
+    }
+  </script>
+<div class="gcb-cols"> {% include 'banner.html' %} </div>
+
+<div class="gcb-cols"> {% include 'summary.html' %} </div>
+<!-- Course Structure Graph -->
+<div class="gcb-cols">
+   {% include 'course_structure_preview.html' %} 
+</div>
+
+<!-- Instructors -->
+<div class="gcb-cols">
+  <div class="gcb-col-lightgray">
+    <div class="gcb-col-a">
+      <h2 class="instructors-header">Instructor</h2>
+    </div>
+    <!-- gcb-col-a -->
+    <div class="gcb-col-b">
+      <div class="instructors-cols">
+        <div id="instructor-img">
+          <center>
+            <img src="/assets/img/Geoffrey.jpg" class="instructors-pic" title="Geoffrey Fox" alt="" role="presentation" />
+          </center>
+          <center>
+            <div class="instructor-name"><b>Geoffrey Fox</b></div>
+          </center>
+        </div>
+        <div class="instructorbio">Geoffrey Fox received a PhD in Theoretical Physics from Cambridge University and is now Professor of Informatics and Computing as well as Physics at Indiana University, where he is director of the Digital Science Center and Associate Dean for Research and Graduate Studies at the School of Informatics and Computing. He previously held positions at Caltech, Syracuse University and Florida State University. He has published around 1,000 papers in Physics and Computer Science, supervised the PhD candidacies of 62 students, and received an h-index of 67 along with over 23000 citations.Professor Fox currently works in applying Computer Science to Bioinformatics, Sensor Clouds, Earthquake and Ice-sheet Science, and Particle Physics. He is principal investigator of FutureGrid – a facility to enable development of new approaches to computing. He is involved in several projects, including the eHumanity portal, to enhance the capability of Minority Serving Institutions. A Fellow of APS and ACM, he has experience in online education and its use in MOOCs for areas like Data and Computational Science.</div>
+      </div>
+    </div>
+    <!-- gcb-col-b --> 
+  </div>
+  <!-- gcb-col-12 --> 
+</div>
+<!-- gcb-cols -->
+
+<div class="verticalLine"> </div>
+<!-- Prerequirement and FAQ -->
+<div class="gcb-cols">
+  <div class="gcb-col-gray">
+    <div class="prereq-col">
+      <h2 class="prereq-header" style="color:rgba(0,0,0,1);">Prerequisites</h2>
+      <ul class="prereq-list">
+        <p>
+        <li>This course is designed to be taken by anybody with or without a computer science background.
+          You do not need any programming experience to follow the course. </li>
+        <br>
+        <li>If you wish, you can take the tech training units to gain a better understanding of Python and Plotviz. These units will help you run some software code in the units following tech training.</li>
+        </p>
+      </ul>
+    </div>
+    <div class="faq-col">
+      <h2 class="faq-header" style="color:rgba(0,0,0,1);">FAQ</h2>
+      <ul class="faq-list">
+        <p>
+        <li>Everything is free.</li>
+        <br>
+        <li>The entire MOOC is free.</li>
+        <br>
+        <li>No credit will be provided for the course.</li>
+        <br>
+        <li>A certificate will be provided.</li>
+        </p>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- gcb-cols --> 
+
+{% endblock %}
+
+{% block main_content %}
+
+{% endblock %}

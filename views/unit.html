@@ -1,0 +1,251 @@
+{% extends 'base_course.html' %}
+
+{% block subtitle %}
+  {# I18N: Title of the webpage. #}
+  - {{ gettext('Unit') }} {{ unit.index }} - {{ unit.title }}
+{% endblock subtitle %}
+
+{% block top_content %}
+{% endblock %}
+
+{% block navbar %} 
+<!-- unit navigational bar -->
+
+<div id="navContainer"> {% include 'nav.html' %} </div>
+{% endblock %}
+
+{% block main_content %} 
+<script>
+  var questionData = {};
+  {% if lesson and lesson.scored %}
+    questionData.scored = true;
+  {% else %}
+    questionData.scored = false;
+  {% endif %}
+</script>
+<div id="gcb-main"> {% if is_read_write_course and is_course_admin %} <a href="dashboard?action=edit_unit&key={{ unit_id }}"
+      class="gcb-button gcb-button-action">Edit unit</a> {% if lesson %} <a href="dashboard?action=edit_lesson&key={{ lesson_id }}"
+        class="gcb-button gcb-button-action">Edit lesson</a> {% endif %}
+  {% endif %} 
+  <!--<div>
+    <h1 class="gcb-unit-header">
+        <ul class="gcb-breadcrumb">
+        {# I18N: Navigation breadcrumb. #}
+        <li><a href="unit?unit={{ unit.unit_id }}">
+        {# I18N: Navigation breadcrumb. #}
+        {{ gettext('Unit') }} {{ unit.index }}</a></li>
+        {% if lesson %}
+        {# I18N: Navigation breadcrumb. #}
+        <li>{{ gettext('Lesson') }} {{ lesson.index }}</li>
+        {% endif %}
+        </ul>
+    </h1>
+  </div>-->
+  <div id="video-and-lesson-navigation"> {% if lessons %}
+    {% include 'lesson_navbar.html' %}
+    {% endif %}
+    <div class="gcb-article tab-content" role="main"> {{course_info.unit.after_content_begins | safe}}
+      
+      {% if not lesson %}
+      <div style="padding-bottom: 20px;">
+        <div class="gcb-aside gcb-button-box"> {# I18N: Text shown for a unit that has had no lessons added to it yet. #}
+          {{ gettext('This unit does not contain any lessons.') }} </div>
+      </div>
+      {% else %}
+      <div style="padding-bottom: 20px;">
+        <div class="gcb-aside gcb-button-box"> {% if lesson.now_available or is_course_admin %}
+          <div>
+            <h2 class="gcb-unit-header">
+              <ul class="gcb-breadcrumb">
+                {# I18N: Navigation breadcrumb. #}
+                <li><a href="course">{% trans %} Course {% endtrans %}</a></li>
+                <li><a href="unit?unit={{ unit.unit_id }}"> {# I18N: Navigation breadcrumb. #}
+                  {{ gettext('Unit %(id)s - %(title)s', id=unit.index, title=unit.title) }}</a></li>
+                
+                {% if lesson %} 
+               
+                {# I18N: Navigation breadcrumb. #}
+                
+             
+                 
+                <div class="breadcrumb-unit-title">
+               
+                {{ gettext('Lesson') }} {{ lesson.index }} 
+              
+                - {{ lesson.title }}
+                
+                {% if not lesson.now_available and is_course_admin %} <span id="lesson-title-private"> (Private) </span> {% endif %}
+                
+                </div>
+          
+                
+                {% endif %}
+             
+            </h2>
+             </ul>
+          </div>
+         <!-- <div class="gcb-cols">
+            <div class="gcb-col-7">
+              <h1 class="gcb-lesson-title"> {{ gettext('Unit %(id)s - %(title)s', id=unit.index, title=unit.title) }}:&nbsp;
+                {{ lesson.title }}
+                {% if not lesson.now_available and is_course_admin %} <span id="lesson-title-private"> (Private) </span> {% endif %} </h1>
+            </div>
+          </div>-->
+          <!-- /gcb-cols --> 
+          
+          <!-- Objective/Overview --> 
+          {% if unit.new_overview %}
+          <div class="gcb-lesson-content gcb-lesson-content-overview">
+              <div class="unit-new-overview">
+                {{ unit.new_overview | safe }}
+              </div>
+            {% if lesson.objectives %}
+              <div class="lesson-new-overview">
+              {{ lesson.objectives | safe }}
+              </div>
+            {% endif %}
+            {% if lesson.scored %}
+            <div class="qt-grade-scored-lesson qt-hidden">
+              <button class="gcb-button qt-check-answer-button"> {# I18N: Button at the bottom of a lesson page offering the student the opportunity to grade his/her answers. #}
+              {{ gettext('Grade Questions') }} </button>
+            </div>
+            <div class="qt-grade-report qt-hidden"></div>
+            {% endif %} </div>
+          {% endif %} 
+          
+          
+          <!-- Video --> 
+          {% if lesson.video %}
+          <p class="gcb-video-container"> {# I18N: Alt text for an embedded YouTube video player. #}
+            <iframe class="youtube-player" title="{{ gettext('YouTube Video Player') }}"
+                        type="text/html" width="650" height="400" frameborder="0" allowfullscreen
+                        src="https://www.youtube.com/embed/{{ lesson.video }}?feature=player_embedded&rel=0"> </iframe>
+          </p>
+          <div class="gcb-next-prev-button-box">
+      <div class="prev-button" style="float:left; margin-top: 0px; margin-left: 40px;"> {% if back_button_url %} <a href="{{ back_button_url }}"> {% trans %} Previous Lesson {% endtrans %} </a> {% endif %} </div>
+      <div class="next-button" style="float:right; margin-top: 0px; margin-right: 40px;"> {% if next_button_url %} <a href="{{ next_button_url }}"> {% trans %} Next Lesson {% endtrans %} </a> {% else %} <a href="course"> {% trans %} End {% endtrans %} </a> {% endif %} </div>
+    </div>
+          {% endif %}
+          
+          
+          {% else %}
+          <h1 class="gcb-lesson-title"> {{ lesson.title }} </h1>
+          <br>
+          <br>
+          <div> {# I18N: Text shown for a lesson that has not been made public. #}
+            {{ gettext('This lesson is not available.')}} </div>
+          {% endif %} </div>
+        <!-- /gcb-aside --> 
+      </div>
+      {% endif %}
+      
+      {{course_info.unit.before_content_ends | safe}} </div>
+      
+     
+          </div>
+  <!-- video-and-lesson-navigation --> 
+    
+    <!-- Video Utilities -->
+          <div class="course-utilities">
+            <div id="course-utilities-left"> 
+              <!-- left side: Youtube, Powerpoint, audio only -->
+              <div class="course-utilities-left"><a href="http://www.youtube.com/watch?v={{ lesson.video }}" target="_blank"><img src="/assets/img/youtube_icon.png" /></a></div>
+              {% if lesson.notes %}
+              <div class="course-utilities-left"><a href="{{ lesson.notes }}" target="_blank"><img src="/assets/img/Microsoft_PowerPoint_icon.png" /></a></div>
+              {% else %}
+              <div class="course-utilities-left no-hover"><img src="/assets/img/bw_Microsoft_PowerPoint_icon.png" /></div>
+              {% endif %} </div>
+            <div id="course-utilities-right"> 
+              <!-- right side: Facebook, Twitter, Google+ --> 
+              <!-- <div class="course-utilities-right"><a href="" target="_blank"><img src="/assets/img/Microsoft_PowerPoint_icon.png" /></a></div>-->
+              <div class="course-utilities-right"> <a href="#" onclick="window.open(
+                                    'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
+                                    'facebook-share-dialog', 
+                                    'width=626,height=436'); 
+                                     return false;"><img src="/assets/img/FB-f-Logo__blue_50.png" /> </a> </div>
+              <div class="course-utilities-right"> <a href="#" onclick="window.open(
+                                    'http://twitter.com/intent/tweet?text='+encodeURIComponent(location.href),
+                                    'twitter-share-dialog',
+                                    'width=625,height=436');
+                                     return false;"><img src="/assets/img/twitter-bird-blue-on-white.png" /> </a> </div>
+              <div class="course-utilities-right"> <a href="#" onclick="window.open(
+                                    'https://plus.google.com/share?url='+encodeURIComponent(location.href),
+                                    'google-plus-share-dialog',
+                                    'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=600,height=600');
+                                     return false;"><img src="/assets/img/gplus-32.png" /> </a> </div>
+            </div>
+            </div>
+
+  
+  <!-- Course Panel -->
+  <div id="course-panel">
+  {% if lesson and (lesson.now_available or is_course_admin) %}
+    <ul id="course-tabs">
+    
+      <li><a href="#" name="tab1">Discussion</a></li>
+      
+      {% if unit.files %}
+        <li><a href="#" name="tab2">Files</a></li>
+      {% endif %}
+      
+      {% if lesson.activity and lesson.activity_listed %}
+        <li><a href="#" name="tab3">Activity</a></li>
+      {% endif %}
+      
+      {% if unit.resources %}
+        <li><a href="#" name="tab4">Resources</a></li>
+      {% endif %}
+      
+    </ul>
+    
+    
+    <div id="course-content">
+      <div id="tab1" class="course-materials">
+      <div>Use communities Link: https://plus.google.com/u/0/communities/115380911662099238010</div>
+      {% if lesson.video %}
+        <div id="disqus_thread" role="comments forum"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'xinformatics'; // required: replace example with your forum shortname
+            var disqus_identifier = '{{ unit.unit_id }}';
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>
+          Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+        <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      {% endif %}
+    </div>
+      
+      <!-- Files -->
+      {% if unit.files %}
+      <div id="tab2" class="course-materials">
+        <div class="gcb-lesson-content course-files"> {{ unit.files | safe }} </div>
+      </div>
+      {% endif %}
+      
+      <!-- Activity -->
+      {% if lesson.activity and lesson.activity_listed %}
+      <div id="tab3" class="course-materials"> 
+        <script src="{{ activity_script_src }}"></script>
+        <div id="activityContents" class="gcb-lesson-content course_activity" style="width: 785px;"></div>
+      </div>
+      {% endif %}
+      
+      <!-- Resources -->
+      {% if unit.resources %}
+      <div id="tab4" class="course-materials">
+        <div class="gcb-lesson-content course-resources"> {{ unit.resources | safe }} </div>
+      </div>
+      {% endif %}
+      
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %} 

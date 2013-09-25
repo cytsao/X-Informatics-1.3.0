@@ -1,0 +1,10 @@
+<div id="navbar">
+  <ul id="navWrapper">
+    {% for u in units %}
+      {% if u.type == 'U' %}
+        <a href="/unit?unit={{u.unit_id }}" data-tooltip="{{u.title}}"> <li id="unit{{u.unit_id}}" class="unit {% if u.unit_id|int == unit.index|int %}current-unit{% else %} {{u.unit_id}} {{unit.index}} {% endif %}"></li></a>
+      {% endif %}
+    {% endfor %} 
+  </ul>
+  <!-- Top Nav -->
+</div>

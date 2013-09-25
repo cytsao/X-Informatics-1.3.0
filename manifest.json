@@ -1,0 +1,26 @@
+{
+  "entities": [
+    {
+      "is_draft": false, 
+      "path": "files/AnnouncementEntity.json"
+    }, 
+    {
+      "is_draft": false, 
+      "path": "files/ConfigPropertyEntity.json"
+    }, 
+    {
+      "is_draft": false, 
+      "path": "files/EventEntity.json"
+    }, 
+    {
+      "is_draft": false, 
+      "path": "files/Student.json"
+    }, 
+    {
+      "is_draft": false, 
+      "path": "files/StudentPropertyEntity.json"
+    }
+  ], 
+  "raw": "course:/:/:", 
+  "version": "1.2"
+}

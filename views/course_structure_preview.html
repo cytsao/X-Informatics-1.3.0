@@ -1,0 +1,95 @@
+<div class="gcb-cols">
+    <div class="gcb-aside">
+      <div id="gcb-main">
+        <div id="course-structure-comp" >
+          <div id="course-structure"><h2>Course Structure</h2><span class="highlight">&nbsp;&nbsp;please enroll to view course details</span>
+            <!-- Enroll -->
+            <span class="course-structure-enroll ">
+              <a href="register">Enroll</a>
+            </span>
+          </div>
+          
+            {% for unit in units %}
+
+              {% if unit.type == 'A' %}
+                <div class="accordion"><h3>{{ unit.title }}</h3></div>
+                
+              {% elif unit.type == 'U' %}
+              
+              
+              
+              					{% if unit.unit_id == '1' %} <p class="section-info">Introduction </p><div class="accordion">
+                                {% elif unit.unit_id == '3' %} <p class="section-info">Overview of Data Science: What is Big Data, Data Analytics and X-Informatics? </p><div class="accordion">
+                                {% elif unit.unit_id == '6' %} <p class="section-info">Technology Training</p><div class="accordion">
+                                {% elif unit.unit_id == '7' %} <p class="section-info">X= Physics Case Study</p><div class="accordion">
+                                {% elif unit.unit_id == '11' %} <p class="section-info">Technology Training</p><div class="accordion">
+                                {% elif unit.unit_id == '12' %} <p class="section-info">X= e-Commerce and LifeStyle Case Study</p><div class="accordion">
+                                {% elif unit.unit_id == '17' %} <p class="section-info">Infrastructure and Technologies for Big Data X-Informatics</p><div class="accordion">
+                                {% elif unit.unit_id == '21' %} <p class="section-info">Web Search Informatics</p><div class="accordion">
+                                {% elif unit.unit_id == '23' %} <p class="section-info">Technology for X-Informatics</p><div class="accordion">
+                                {% elif unit.unit_id == '27' %} <p class="section-info">X= Health Informatics</p><div class="accordion">
+                                {% elif unit.unit_id == '28' %} <p class="section-info">X= Sensor Informatics</p><div class="accordion">
+                                {% elif unit.unit_id == '29' %} <p class="section-info">X= Radar Informatics</p><div class="accordion">
+                                {% else %} 
+                                {% endif %}
+                                
+                                
+                                           <h3 class="color-trigger enroll-hint-trigger">{{ gettext('Unit %(id)s - %(title)s', id=unit.index, title=unit.title) }} <span class="total-time">{{ unit.total_time }}</span></h3>
+                                                       <!-- <span class="enroll-hint">&nbsp;&nbsp;&nbsp;&nbsp;enroll to start!</span>
+                                                            {% if unit.coding == 'Python' %}
+                                                                  <img class="python_logo" alt="Python" title="Python" src="/assets/img/python_logo.png" />
+                                                            {% endif %}-->
+                                            
+                                            <div class="multiple_column">
+                                            {% if unit.new_overview %}
+                                            {{ unit.new_overview | safe }}
+                                            {% else %}
+                                            Coming Soon!
+                                            {% endif %}
+                                            </div>
+                                
+                                            
+                                            
+                       {% if unit.unit_id == '2' or unit.unit_id == '5' or unit.unit_id == '6' or unit.unit_id == '10' or unit.unit_id == '11' or unit.unit_id == '16' or unit.unit_id == '20' or unit.unit_id == '22' or unit.unit_id == '26' or unit.unit_id == '27' or unit.unit_id == '28' or unit.unit_id == '29' %} </div> 
+                       
+                       
+                       
+                       {% endif %}
+        
+                                
+                
+                {% elif unit.type == 'O' %}
+                  <ul><li>
+                    <p class="gcb-top-content"> {{ unit.title }} </p>
+                    </li></ul>
+                {% else %}
+                  <ul><li>
+                    <p class="gcb-top-content"> <span class="gcb-progress-empty"></span> Error: unit type not recognized.</p>
+                    </li>
+                    </ul>
+                {% endif %}
+               
+                  
+                
+            {% endfor %}
+          </div>
+    </div>
+  </div>
+
+<script>
+   $(function() {
+    $( ".accordion" ).accordion({ active: false ,
+								collapsible: true,
+								icons: { "header": "ui-icon-plus", "activeHeader": "ui-icon-minus" },
+								heightStyle: "content",
+								disabled: false,
+								clearStyle: true,
+								header: 'h3'
+								});
+	$(".accordion h3 a").click(function() {
+      window.location = $(this).attr('href');
+      return false;
+   });
+								
+  });
+</script>

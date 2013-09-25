@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="config.py" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187204461557270" remote="130187204970000000" Dst="2" />
+<file name="content.py" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187204462037318" remote="130187204970000000" Dst="2" />
+<file name="counters.py" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187204459527067" remote="130187204970000000" Dst="2" />
+<file name="courses.py" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130245204469796354" remote="130245204480000000" Dst="2" />
+<file name="custom_modules.py" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187204461417256" remote="130187204970000000" Dst="2" />
+<file name="entities.py" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187204462867401" remote="130187204970000000" Dst="2" />
+<file name="jobs.py" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187204460837198" remote="130187204970000000" Dst="2" />
+<file name="models.py" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130232125830338931" remote="130232125940000000" Dst="2" />
+<file name="notify.py" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187204462347349" remote="130187204970000000" Dst="2" />
+<file name="progress.py" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130214946419250218" remote="130214946440000000" Dst="2" />
+<file name="property.py" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187204459717086" remote="130187204970000000" Dst="2" />
+<file name="review.py" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187204460577172" remote="130187204970000000" Dst="2" />
+<file name="roles.py" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187204459927107" remote="130187204970000000" Dst="2" />
+<file name="student_work.py" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187204459827097" remote="130187204970000000" Dst="2" />
+<file name="transforms.py" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187204460467161" remote="130187204970000000" Dst="2" />
+<file name="utils.py" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187204461327247" remote="130187204970000000" Dst="2" />
+<file name="vfs.py" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130210843500000000" remote="130210843500000000" Dst="2" />
+<file name="__init__.py" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187204462127327" remote="130187204970000000" Dst="2" />
+<file name="review.pyc" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187205160000000" remote="130187205160000000" Dst="2" />
+<file name="counters.pyc" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187205160000000" remote="130187205160000000" Dst="2" />
+<file name="custom_modules.pyc" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187205160000000" remote="130187205160000000" Dst="2" />
+<file name="jobs.pyc" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187205160000000" remote="130187205160000000" Dst="2" />
+<file name="utils.pyc" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187205160000000" remote="130187205160000000" Dst="2" />
+<file name="models_copy.py" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130210840220000000" remote="130210840220000000" Dst="2" />
+<file name="property.pyc" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187205150000000" remote="130187205150000000" Dst="2" />
+<file name="student_work.pyc" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187205160000000" remote="130187205160000000" Dst="2" />
+<file name="models_copy_2.py" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130211536160000000" remote="130211536160000000" Dst="2" />
+<file name="vfs.pyc" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130210843630000000" remote="130210843630000000" Dst="2" />
+<file name="courses.pyc" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130222752860000000" remote="130222752860000000" Dst="2" />
+<file name="models.pyc" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130215927820000000" remote="130215927820000000" Dst="2" />
+<file name="progress.pyc" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130214946470000000" remote="130214946470000000" Dst="2" />
+<file name="transforms.pyc" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187205160000000" remote="130187205160000000" Dst="2" />
+<file name="roles.pyc" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187205160000000" remote="130187205160000000" Dst="2" />
+<file name="__init__.pyc" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187205150000000" remote="130187205150000000" Dst="2" />
+<file name="config.pyc" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187205160000000" remote="130187205160000000" Dst="2" />
+<file name="content.pyc" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187205160000000" remote="130187205160000000" Dst="2" />
+<file name="notify.pyc" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187205160000000" remote="130187205160000000" Dst="2" />
+<file name="vfs_copy_2.py" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130211536160000000" remote="130211536160000000" Dst="2" />
+<file name="entities.pyc" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130187205160000000" remote="130187205160000000" Dst="2" />
+<file name="vfs_copy.py" server="cloudmooc.pti.indiana.edu//home/smaini/" local="130210840220000000" remote="130210840220000000" Dst="2" />
+</dwsync>

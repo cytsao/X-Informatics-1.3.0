@@ -1,0 +1,340 @@
+@charset "UTF-8";
+/* CSS Document */
+
+h1, h2, h3, h4, h5, h6 {
+/*	font-family: Arial, Helvetica, sans-serif;
+*/}
+#put a, #put a:hover {
+	text-decoration: none;
+	color: #fff;
+}
+/**********/
+#course-structure h2 {
+	display: inline;
+	color: #FFFFFF;
+	font-size: 25px;
+	margin-left: 20px;
+}
+.highlight {
+	display: inline;
+	color: orange;
+	font-size: 13px;
+	font-style: italic;
+}
+ul#navWrapper {
+	/*    top:80px;
+      float: left;*/
+	margin: 0;
+	padding: 0;
+}
+ul#navWrapper li {
+	float: left;
+	list-style: none;
+}
+ul#navWrapper li li {
+	float: none;
+	list-style: none;
+	margin-left: 10px;
+	margin-top: 4px;
+}
+ul#navWrapper li li:first-child {
+	list-style: none;
+	padding-top: 5px;
+}
+ul#navWrapper ul {
+	list-style: none;
+	display: none;
+	position: absolute;
+	background-color: rgba(51,51,51,1);
+	top: 110px;
+	right: 130%;
+	height: 200px;
+	width: 250px;
+	border-style: solid;
+	border-color: rgba(102,102,102,1);
+}
+ul#navWrapper li:hover ul {
+	display: list-item;
+}
+ul#navWrapper a {
+	font-weight: bold;
+}
+ul#navWrapper li:hover {
+}
+#put {
+	/*
+	position:absolute;
+	left:100px;
+	top:0px;*/
+	background-color: #010e43;
+	width: 1024px;
+	height: 815px;
+}
+#arrow {
+	background-image: url("/assets/img/course_structure_img/arrow.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 260px;
+	top: 210px;
+	width: 598px;
+	height: 426px;
+}
+#title {
+	background-image: url("/assets/img/course_structure_img/Course Structure.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 160px;
+	top: 270px;
+	width: 474px;
+	height: 44px;
+}
+#legend {
+	background-image: url("/assets/img/course_structure_img/legend.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 500px;
+	top: 400px;
+	width: 137px;
+	height: 131px;
+}
+.section {
+	margin: 1px;
+	padding-right: 40px;
+	width: 98px;
+	height: 112px;
+	float: left;
+	z-index: 999;
+}
+#section1 {
+	background-image: url("/assets/img/course_structure_img/1Intro.png");
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 80px;
+	left: 250px;
+}
+#section2 {
+	background-image: url("/assets/img/course_structure_img/2Python.png");
+	background-repeat: no-repeat;
+	width: 69px;
+	position: absolute;
+	left: 400px;
+	height: 91px;
+	top: 100px;
+}
+#section3 {
+	background-image: url("/assets/img/course_structure_img/3Physics.png");
+	background-repeat: no-repeat;
+	top: 80px;
+	left: 520px;
+	position: absolute;
+}
+#section4 {
+	background-image: url("/assets/img/course_structure_img/4Plotviz.png");
+	background-repeat: no-repeat;
+	top: 100px;
+	left: 650px;
+	position: absolute;
+	width: 69px;
+	height: 91px;
+}
+#section5 {
+	background-image: url("/assets/img/course_structure_img/5EC.png");
+	background-repeat: no-repeat;
+	top: 80px;
+	left: 770px;
+	position: absolute;
+}
+#section6 {
+	background-image: url("/assets/img/course_structure_img/6KM.png");
+	background-repeat: no-repeat;
+	top: 200px;
+	left: 770px;
+	position: absolute;
+	width: 112px;
+	height: 131px;
+}
+#section7 {
+	background-image: url("/assets/img/course_structure_img/7Web.png");
+	background-repeat: no-repeat;
+	top: 350px;
+	left: 770px;
+	position: absolute;
+}
+#section8 {
+	background-image: url("/assets/img/course_structure_img/8PR.png");
+	background-repeat: no-repeat;
+	top: 480px;
+	left: 770px;
+	position: absolute;
+	width: 112px;
+	height: 131px;
+}
+#section9 {
+	background-image: url("/assets/img/course_structure_img/9Data.png");
+	background-repeat: no-repeat;
+	height: 130px;
+	top: 630px;
+	left: 770px;
+	position: absolute;
+}
+#section10 {
+	background-image: url("/assets/img/course_structure_img/10KMMR.png");
+	background-repeat: no-repeat;
+	height: 130px;
+	top: 630px;
+	left: 650px;
+	position: absolute;
+}
+#section11 {
+	background-image: url("/assets/img/course_structure_img/11Health.png");
+	background-repeat: no-repeat;
+	top: 630px;
+	left: 520px;
+	position: absolute;
+}
+#section12 {
+	background-image: url("/assets/img/course_structure_img/12Sensor.png");
+	background-repeat: no-repeat;
+	top: 630px;
+	left: 390px;
+	position: absolute;
+}
+#section13 {
+	background-image: url("/assets/img/course_structure_img/13Radar.png");
+	background-repeat: no-repeat;
+	top: 630px;
+	left: 250px;
+	position: absolute;
+}
+#section1:hover {
+	background-image: url("/assets/img/course_structure_img/1Intro_H.png");
+}
+#section2:hover {
+	background-image: url("/assets/img/course_structure_img/2Python_H.png");
+}
+#section3:hover {
+	background-image: url("/assets/img/course_structure_img/3Physics_H.png");
+}
+#section4:hover {
+	background-image: url("/assets/img/course_structure_img/4Plotviz_H.png");
+}
+#section5:hover {
+	background-image: url("/assets/img/course_structure_img/5EC_H.png");
+}
+#section6:hover {
+	background-image: url("/assets/img/course_structure_img/6KM_H.png");
+}
+#section7:hover {
+	background-image: url("/assets/img/course_structure_img/7Web_H.png");
+}
+#section8:hover {
+	background-image: url("/assets/img/course_structure_img/8PR_H.png");
+}
+#section9:hover {
+	background-image: url("/assets/img/course_structure_img/9Data_H.png");
+}
+#section10:hover {
+	background-image: url("/assets/img/course_structure_img/10KMMR_H.png");
+}
+#section11:hover {
+	background-image: url("/assets/img/course_structure_img/11Health_H.png");
+}
+#section12:hover {
+	background-image: url("/assets/img/course_structure_img/12Sensor_H.png");
+}
+#section13:hover {
+	background-image: url("/assets/img/course_structure_img/13Radar_H.png");
+}
+.course-structure-enroll {
+	float: right;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	font-size: 15px;
+}
+.course-structure-enroll > a {
+	color: #FFF;
+}
+.bold {
+	font-weight: bold;
+}
+.enroll-hint {
+	display: none;
+	color: orange;
+	font-size: 13px;
+	font-style: italic;
+}
+.enroll-hint-trigger:hover .enroll-hint {
+	display: inline;
+}
+#gcb-nav-y li .watch-now a {
+	font-weight: bold;
+}
+.watch-now sup {
+	color: orange;
+	font-style: italic;
+	font-weight: normal;
+}
+.course-structure-link {
+}
+.color-trigger:hover .course-structure-link, .color-trigger:hover {
+	color: blue !important;
+}
+#course-structure {
+	margin: 0 0 10px;
+}
+.accordion {
+	padding: 0 20px;
+	margin: 0 0 0 5px;
+}
+#course-structure-comp {
+	background: #083358;
+	padding: 10px 0;
+}
+#course-structure-comp ul {
+	height: 100%;
+	padding: 0 0 10px;
+}
+#course-structure-comp li {
+	list-style: none;
+}
+#course-structure-comp li p {
+}
+#course-structure-comp p.section-info {
+	text-shadow: 5px 5px 5px #000000;
+}
+.section-info {
+	color: orange;
+	margin: 0;
+	padding: 10px 20px;
+}
+#coursestructure h2 {
+	margin-left: 25px;
+}
+#course-structure-comp > .accordion > div {
+	background: none;
+	color: #ffffff;
+}
+#course-structure-comp > .accordion > div > p {
+	margin: 0;
+}
+#course-structure-comp .accordion > h3 > a:hover {
+	text-decoration: underline;
+	color: blue;
+	width: 70%;
+}
+.accordion > h3 > a:hover {
+	text-decoration: underline;
+	color: blue;
+}
+.multiple_column {
+	-moz-column-count: 3; /* Firefox */
+	-webkit-column-count: 3; /* Safari and Chrome */
+	column-count: 3;
+	column-width: 250px;
+	-moz-column-width: 250px; /* Firefox */
+	-webkit-column-width: 250px; /* Safari and Chrome */
+}
+.total-time {
+	float:right;
+}
